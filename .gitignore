@@ -1,1 +1,2 @@
-iterm2/AppSupport/typescript
+# ignore log files for git stuff
+/iterm2/AppSupport/typescript
