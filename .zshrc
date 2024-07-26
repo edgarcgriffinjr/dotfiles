@@ -120,6 +120,7 @@ source $ZSH/oh-my-zsh.sh
 alias c='clear'
 alias ga='git add .'
 alias gs='git status'
+alias gp='git push'
 alias gc="git commit -m" 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
