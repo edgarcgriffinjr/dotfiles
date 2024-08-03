@@ -1,0 +1,36 @@
+#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+version = 2
+final_space = true
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+
+[[blocks]]
+type = 'prompt'
+alignment = 'left'
+
+[[blocks.segments]]
+type = 'path'
+style = 'plain'
+background = 'transparent'
+foreground = 'blue'
+template = '{{ .Path }}'
+
+[blocks.segments.properties]
+style = 'folder'
+
+[[blocks.segments]]
+type = 'git'
+style = 'plain'
+background = 'transparent'
+foreground = 'gray'
+template = " {{ .HEAD }} {{ if or (.Working.Changed) (.Staging.Changed) }}*{{end}} {{ if gt .Ahead 0 }} \u2191 {{ end }} {{ if gt .Behind 0}} \u2193 {{ end }}</>"
+
+[blocks.segments.properties]
+branch_icon = ''
+
+[[blocks.segments]]
+type = 'text'
+style = 'plain'
+background = 'transparent'
+foreground = 'magenta'
+template = '❯'
